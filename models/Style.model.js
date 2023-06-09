@@ -1,41 +1,44 @@
 const { Schema, model } = require("mongoose");
 
 // TODO: Please make sure you edit the User model to whatever makes sense in this case
-const userSchema = new Schema(
+const styleSchema = new Schema(
   {
-    username: {
+    style: {
       type: String,
       required: false,
       unique: true,
       trim: true,
     },
-
-    firstname: {
-      type: String,
-      required: true,
-      unique: false,
-      trim: true,
-    },
-
-    email: {
+    title: {
       type: String,
       required: true,
       unique: true,
       trim: true,
-      lowercase: true,
+      lowercase: false,
     },
-    password: {
+    primaryImage: {
       type: String,
       required: true,
     },
 
-    /*     myStyles: [
+    additionalImages: [
       {
-        styleType: String,
-        style: Enumerator,
-        uploadedImage: String,
-      }, */
-    /*     ], */
+        type: String,
+        required: false,
+      },
+    ],
+
+    description: {
+      type: String,
+      required: true,
+    },
+
+    celebrities: [
+      {
+        type: String,
+        required: true,
+      },
+    ],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
@@ -43,6 +46,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = model("User", userSchema);
+const User = model("Style", styleSchema);
 
-module.exports = User;
+module.exports = Style;
