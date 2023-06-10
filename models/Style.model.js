@@ -3,18 +3,35 @@ const { Schema, model } = require("mongoose");
 // TODO: Please make sure you edit the User model to whatever makes sense in this case
 const styleSchema = new Schema(
   {
-    style: {
+    beardStyle: {
       type: String,
-      required: false,
-      unique: true,
-      trim: true,
+      enum: [
+        "Chevron Mustache",
+        "Lampshade Mustache",
+        "Walrus Mustache",
+        "Painter's Brush Mustache",
+        "Toothbrush Mustache",
+        "Handlebar Mustache",
+        "English Mustache",
+        "Hungarian Mustache",
+        "Beardstache",
+        "Horseshoe Mustache",
+      ],
     },
-    title: {
+    hairStyle: {
       type: String,
-      required: true,
-      unique: true,
-      trim: true,
-      lowercase: false,
+      enum: [
+        "Crew Cut",
+        "Buzz Cut",
+        "Pompadour",
+        "Undercut",
+        "The Peaky Blinder",
+        "The Man Bun",
+        "Mohawk",
+        "Textured Crop",
+        "Bowl Cut",
+        "Modern Mullet",
+      ],
     },
     primaryImage: {
       type: String,
@@ -35,8 +52,12 @@ const styleSchema = new Schema(
 
     celebrities: [
       {
-        type: String,
-        required: true,
+        nameOfCelebrity: {
+          type: String,
+        },
+        image: {
+          type: String,
+        },
       },
     ],
   },
@@ -46,6 +67,6 @@ const styleSchema = new Schema(
   }
 );
 
-const User = model("Style", styleSchema);
+const Style = model("Style", styleSchema);
 
 module.exports = Style;
