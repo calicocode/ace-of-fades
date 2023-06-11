@@ -2,14 +2,20 @@
 <br />
 <br />
 {{#each beards}}
-  <h2>{{#if this.beardStyle}}</h2>
-  <p>
-    {{this.beardStyle}}
 
-    <br>
-    <img src="{{this.primaryImage}}">
-    <a href="/beard/{{this._id}}">View Details</a>
-    {{/if}}
-  </p>
-  <br>
+  {{#if this.beardStyle}}
+  <a href="/beard/{{this._id}}">
+    <div class="card w-96 bg-base-100 shadow-xl">
+      <figure><img src="{{this.primaryImage}}" /></figure>
+      <div class="card-body">
+        <h2 class="card-title">{{this.beardStyle}}</h2>
+        <div class="card-actions justify-end">
+        </div>
+      </div>
+      </a>
+    </div>
+
+<br>
+<br>
+  {{/if}}
 {{/each}}

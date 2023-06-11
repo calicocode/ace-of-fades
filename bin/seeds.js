@@ -5,7 +5,7 @@ const Style = require("../models/Style.model");
 const styles = [
   {
     beardStyle: "Chevron Mustache",
-    primaryImage: "URLofThePrimaryImage",
+    primaryImage: "../images/chevron.png",
     additionalImages: ["URL1", "URL2", "URL3"],
     description: "This is a BEAST of a handlebar moustache",
     celebrities: [
@@ -27,7 +27,7 @@ const styles = [
 
   {
     beardStyle: "Beardstache",
-    primaryImage: "URLofThePrimaryImage",
+    primaryImage: "../images/beardstache.png",
     additionalImages: ["URL1", "URL2", "URL3"],
     description: "This is a BEAST of a handlebar moustache",
     celebrities: [
@@ -49,7 +49,7 @@ const styles = [
 
   {
     hairStyle: "Crew Cut",
-    primaryImage: "URLofThePrimaryImage",
+    primaryImage: "../images/beardstache.png",
     additionalImages: ["URL1", "URL2", "URL3"],
     description: "This is a BEAST of a handlebar moustache",
     celebrities: [
@@ -71,7 +71,7 @@ const styles = [
 
   {
     hairStyle: "The Peaky Blinder",
-    primaryImage: "URLofThePrimaryImage",
+    primaryImage: "../images/beardstache.png",
     additionalImages: ["URL1", "URL2", "URL3"],
     description: "This is a BEAST of a handlebar moustache",
     celebrities: [
