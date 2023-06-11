@@ -1,5 +1,7 @@
 module.exports = (req, res, next) => {
-  if (req.user.role === "admin") {
+  //req.session.currentUser = user.toObject();
+
+  if (req.session.currentUser === "admin") {
     next();
   } else {
     res.redirect("/auth/login");

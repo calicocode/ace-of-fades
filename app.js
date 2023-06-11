@@ -30,10 +30,14 @@ app.use("/", indexRoutes);
 const authRoutes = require("./routes/auth.routes");
 const beardRoutes = require("./routes/beard.routes");
 const hairRoutes = require("./routes/hair.routes");
+const adminRoutes = require("./routes/admin.routes");
+const middleware = require("./middleware/isAdmin.js");
 
 app.use("/auth", authRoutes);
 app.use("/", beardRoutes);
 app.use("/", hairRoutes);
+app.use("/", adminRoutes);
+app.use("/", middleware);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
