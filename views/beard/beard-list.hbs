@@ -1,0 +1,15 @@
+<h1>Beard Listing</h1>
+<br />
+<br />
+{{#each beards}}
+  <h2>{{#if this.beardStyle}}</h2>
+  <p>
+    {{this.beardStyle}}
+
+    <br>
+    <img src="{{this.primaryImage}}">
+    <a href="/beard/{{this._id}}">View Details</a>
+    {{/if}}
+  </p>
+  <br>
+{{/each}}

@@ -1,0 +1,14 @@
+<h1>Hair Listing</h1>
+
+{{#each hair}}
+  <h2>{{#if this.hairStyle}}</h2>
+  <p>
+    {{this.hairStyle}}
+
+    <br>
+   <img src="{{this.primaryImage}}">
+    <a href="/hair/{{this._id}}">View Details</a>
+    {{/if}}
+  </p>
+  <br>
+{{/each}}
