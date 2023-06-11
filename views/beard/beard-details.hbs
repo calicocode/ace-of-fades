@@ -1,0 +1,34 @@
+<h1>Beard Listing</h1>
+<br />
+<br />
+
+<h2>{{beardStyle}}</h2>
+
+<p>
+  <img src="{{primaryImage}}" alt="Primary Image" />
+  <br />
+  <br />
+</p>
+
+Additional Images:
+{{#each additionalImages}}
+  {{this}}
+{{/each}}
+<br />
+<br />
+<p>Description: {{description}}</p>
+<br />
+<p>
+  Celebrities with this style:
+  <br />
+  <br />
+  {{#each celebrities}}
+
+    {{this.nameOfCelebrity}}
+    <br />
+    {{this.image}}
+    <br />
+    <br />
+  {{/each}}
+
+</p>

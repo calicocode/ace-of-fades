@@ -1,28 +1,44 @@
 const express = require("express");
 const router = express.Router();
 
-const Book = require("../models/Book.model");
-const Author = require("../models/Author.model");
-const isLoggedIn = require("../middleware/isLoggedIn");
+const Style = require("../models/Style.model");
+const User = require("../models/User.model");
+/* const isLoggedIn = require("../middleware/isLoggedIn");
+const Style = require("../models/Style.model"); */
 
-// READ: display all books
-router.get("/books", (req, res, next) => {
-  Book.find()
-    .populate("author")
-    .then((booksFromDB) => {
+// READ: display beards
+router.get("/beard", (req, res, next) => {
+  Style.find()
+    .then((beardsFromDB) => {
       const data = {
-        books: booksFromDB,
+        beards: beardsFromDB,
       };
 
-      res.render("books/books-list", data);
+      res.render("beard/beard-list", data);
     })
     .catch((e) => {
-      console.log("error getting list of books from DB", e);
+      console.log("error getting list of beards from DB", e);
       next(e);
     });
 });
 
-// CREATE: display form
+// READ: display details of one beard style
+router.get("/beard/:beardId", (req, res, next) => {
+  const id = req.params.beardId;
+
+  Style.findById(id)
+    .then((beardFromDB) => {
+      res.render("beard/beard-details", beardFromDB);
+    })
+    .catch((e) => {
+      console.log("error getting beard details from DB", e);
+      next(e);
+    });
+});
+
+module.exports = router;
+
+/* // CREATE: display form
 router.get("/books/create", isLoggedIn, (req, res, next) => {
   Author.find()
     .then((authorsFromDB) => {
@@ -89,20 +105,4 @@ router.post("/books/:bookId/delete", isLoggedIn, (req, res, next) => {
     .then(() => res.redirect("/books"))
     .catch((error) => next(error));
 });
-
-// READ: display details of one book
-router.get("/books/:bookId", (req, res, next) => {
-  const id = req.params.bookId;
-
-  Book.findById(id)
-    .populate("author")
-    .then((bookFromDB) => {
-      res.render("books/book-details", bookFromDB);
-    })
-    .catch((e) => {
-      console.log("error getting book details from DB", e);
-      next(e);
-    });
-});
-
-module.exports = router;
+ */
