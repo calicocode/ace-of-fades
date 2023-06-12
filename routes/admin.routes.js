@@ -24,11 +24,11 @@ router.get("/manage-styles", isLoggedIn, isAdmin, (req, res, next) => {
 
 // CREATE: display form to add new style
 router.get(
-  "/manage-styles/create-new-style",
+  "/manage-styles/create-beard-style",
   isLoggedIn,
   isAdmin,
   (req, res, next) => {
-    res.render("admin/create-new-style");
+    res.render("admin/create-beard-style");
   }
 );
 

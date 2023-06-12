@@ -110,3 +110,29 @@ async function seedData() {
 }
 
 seedData();
+
+/* enum: [
+  "Chevron Mustache",
+  "Lampshade Mustache",
+  "Walrus Mustache",
+  "Painter's Brush Mustache",
+  "Toothbrush Mustache",
+  "Handlebar Mustache",
+  "English Mustache",
+  "Hungarian Mustache",
+  "Beardstache",
+  "Horseshoe Mustache",
+], */
+
+/* enum: [
+  "Crew Cut",
+  "Buzz Cut",
+  "Pompadour",
+  "Undercut",
+  "The Peaky Blinder",
+  "The Man Bun",
+  "Mohawk",
+  "Textured Crop",
+  "Bowl Cut",
+  "Modern Mullet",
+], */
