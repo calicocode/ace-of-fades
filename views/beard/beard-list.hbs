@@ -1,13 +1,14 @@
 <h1>Beard Listing</h1>
 <br />
 <br />
+<div class="mx-20 my-5">
 {{#each beards}}
 
   {{#if this.beardStyle}}
   <a href="/beard/{{this._id}}">
-    <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card w-96 bg-base-100 shadow-xl rounded-md">
       <figure><img src="{{this.primaryImage}}" /></figure>
-      <div class="card-body">
+      <div class="card-body ">
         <h2 class="card-title">{{this.beardStyle}}</h2>
         <div class="card-actions justify-end">
         </div>
@@ -19,3 +20,4 @@
 <br>
   {{/if}}
 {{/each}}
+</div>
