@@ -23,40 +23,45 @@ router.get("/manage-styles", isLoggedIn, isAdmin, (req, res, next) => {
 });
 
 // CREATE: display form to add new style
-router
-  .get("/manage-styles/create", isLoggedIn, isAdmin, (req, res, next) => {
-    res.render("manage-styles/create");
-  })
-  .catch((e) => {
-    console.log("error displaying the manage styles create form", e);
-    next(e);
-  });
+router.get(
+  "/manage-styles/create-new-style",
+  isLoggedIn,
+  isAdmin,
+  (req, res, next) => {
+    res.render("admin/create-new-style");
+  }
+);
 
 // CREATE: process form
-router.post("/manage-styles/create", isLoggedIn, isAdmin, (req, res, next) => {
-  const newStyle = {
-    beardStyle: req.body.beardStyle,
-    hairStyle: req.body.hairStyle,
-    primaryImage: req.body.primaryImage,
-    description: req.body.rating,
-    additionalImages: req.body.additionalImages,
-    celebrities: [
-      {
-        nameOfCelebrity: req.body.nameOfCelebrity,
-        image: req.body.image,
-      },
-    ],
-  };
+router.post(
+  "/manage-styles/create-new-style",
+  isLoggedIn,
+  isAdmin,
+  (req, res, next) => {
+    const newStyle = {
+      beardStyle: req.body.beardStyle,
+      hairStyle: req.body.hairStyle,
+      primaryImage: req.body.primaryImage,
+      description: req.body.rating,
+      additionalImages: req.body.additionalImages,
+      celebrities: [
+        {
+          nameOfCelebrity: req.body.nameOfCelebrity,
+          image: req.body.image,
+        },
+      ],
+    };
 
-  Style.create(newStyle)
-    .then((newStyle) => {
-      res.redirect("/manage-styles");
-    })
-    .catch((e) => {
-      console.log("error creating new style", e);
-      next(e);
-    });
-});
+    Style.create(newStyle)
+      .then((newStyle) => {
+        res.redirect("/manage-styles");
+      })
+      .catch((e) => {
+        console.log("error creating new style", e);
+        next(e);
+      });
+  }
+);
 
 // UPDATE: display form
 router.get(
@@ -69,7 +74,7 @@ router.get(
     try {
       const styleDetails = await Style.findById(styleID);
 
-      res.render("manage-styles/style-edit.hbs", {
+      res.render("admin/edit-style", {
         style: styleDetails,
       });
     } catch (e) {
@@ -79,26 +84,42 @@ router.get(
 );
 
 // UPDATE: process form
-router.post("/styles/:bookId/edit", isLoggedIn, (req, res, next) => {
-  const { bookId } = req.params;
-  const { title, description, author, rating } = req.body;
+router.post(
+  "/manage-styles/:styleID/edit",
+  isLoggedIn,
+  isAdmin,
+  (req, res, next) => {
+    const { styleID } = req.params;
+    const {
+      beardStyle,
+      hairStyle,
+      primaryImage,
+      additionalImages,
+      celebrities,
+    } = req.body;
 
-  Book.findByIdAndUpdate(
-    bookId,
-    { title, description, author, rating },
-    { new: true }
-  )
-    .then((updatedBook) => res.redirect(`/books/${updatedBook.id}`)) // go to the details page to see the updates
-    .catch((error) => next(error));
-});
+    Style.findByIdAndUpdate(
+      styleID,
+      { beardStyle, hairStyle, primaryImage, additionalImages, celebrities },
+      { new: true }
+    )
+      .then((updatedStyle) => res.redirect(`/manage-styles/${updatedStyle.id}`)) // go to the details page to see the updates
+      .catch((error) => next(error));
+  }
+);
 
-// DELETE: delete book
-router.post("/books/:bookId/delete", isLoggedIn, (req, res, next) => {
-  const { bookId } = req.params;
+// DELETE: delete style
+router.post(
+  "/manage-styles/:styleID/delete",
+  isLoggedIn,
+  isAdmin,
+  (req, res, next) => {
+    const { styleID } = req.params;
 
-  Book.findByIdAndDelete(bookId)
-    .then(() => res.redirect("/books"))
-    .catch((error) => next(error));
-});
+    Style.findByIdAndDelete(styleID)
+      .then(() => res.redirect("/manage-styles"))
+      .catch((error) => next(error));
+  }
+);
 
 module.exports = router;
