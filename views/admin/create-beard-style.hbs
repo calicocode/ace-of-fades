@@ -1,6 +1,11 @@
 <h1>Create New Beard Style</h1>
 
-<form method="POST" action="/manage-styles/create-new-style" enctype="multipart/form-data" id = "create-beard-style"></form>
+<form
+  method="POST"
+  action="/manage-styles/create-new-style"
+  enctype="multipart/form-data"
+  id="create-beard-style"
+>
 
   <p>
     <label>
@@ -11,7 +16,11 @@
   <p>
     <label>
       Upload Primary Image:
-      <input type= "file" name="primaryImage" class="file-input w-full max-w-xs" />
+      <input
+        type="file"
+        name="primaryImage"
+        class="file-input w-full max-w-xs"
+      />
     </label>
 
   </p>
@@ -21,6 +30,6 @@
       <input type="description" name="rating" min="1" max="10" />
     </label>
   </p>
-<button type="submit" form="create-beard-style" value="Submit">Submit</button>
+  <button type="submit" form="create-beard-style" value="Submit">Submit</button>
 
 </form>

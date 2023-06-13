@@ -41,6 +41,8 @@ router.post(
   isLoggedIn,
   isAdmin,
   (req, res, next) => {
+    console.log(req);
+
     const newStyle = {
       beardStyle: req.body.beardStyle,
       hairStyle: req.body.hairStyle,
