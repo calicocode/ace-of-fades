@@ -1,3 +1,4 @@
+<section class="m-10">
 <h1>Beard Listing</h1>
 <br />
 <br />
@@ -6,11 +7,12 @@
 
   {{#if this.beardStyle}}
   <a href="/beard/{{this._id}}">
-    <div class="card w-96 bg-base-100 shadow-xl rounded-md">
-      <figure><img src="{{this.primaryImage}}" /></figure>
-      <div class="card-body ">
+    <div class="flex flex-row card w-96 bg-base-100 shadow-xl rounded-xl p-5 bg-gradient-to-r from-[#EEEEEE] to-gray-100">
+      <div class="w-1/2 flex"><img src="{{this.primaryImage}}" /></div>
+      <div class="card-body flex">
         <h2 class="card-title">{{this.beardStyle}}</h2>
-        <div class="card-actions justify-end">
+        <div class="card-actions">
+          {{this.description}}
         </div>
       </div>
       </a>
@@ -21,4 +23,4 @@
   {{/if}}
 {{/each}}
 </div>
-
+</section>
