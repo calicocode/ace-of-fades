@@ -1,1 +1,49 @@
-<h1> Let's edit a style! </h1>
+<h1>
+  Edit the style:
+  {{#if hairStyle}}{{style.hairStyle}}{{/if}}{{#if beardStyle}}
+    {{style.beardStyle}}{{/if}}
+</h1>
+
+<form method="POST" action="/books/{{_id}}/delete">
+  <button>Delete</button>
+</form>
+
+<form method="POST" action="/manage-styles/{{style._id}}/edit">
+  <label>
+    Title:
+    <input type="text" name="title" value="{{book.title}}" />
+  </label>
+
+  <label>
+    Author:
+    <select name="author">
+      {{#each authors}}
+        <option value={{this._id}}>
+          {{this.name}}
+        </option>
+      {{/each}}
+    </select>
+  </label>
+
+  <label>
+    Description:
+    <textarea
+      name="description"
+      cols="30"
+      rows="4"
+    >{{book.description}}</textarea>
+  </label>
+
+  <label>
+    Rate:
+    <input
+      type="number"
+      name="rating"
+      min="1"
+      max="10"
+      value="{{book.rating}}"
+    />
+  </label>
+
+  <button>Save changes</button>
+</form>

@@ -6,6 +6,8 @@ const User = require("../models/User.model");
 const isLoggedIn = require("../middleware/isLoggedIn.js");
 const isAdmin = require("../middleware/isAdmin.js");
 
+const fileUploader = require("../config/cloudinary.config");
+
 // READ: display all styles
 router.get("/manage-styles", isLoggedIn, isAdmin, (req, res, next) => {
   Style.find()
@@ -35,22 +37,25 @@ router.get(
 // CREATE: process form
 router.post(
   "/manage-styles/create-new-style",
+  fileUploader.single("primaryImage"),
   isLoggedIn,
   isAdmin,
   (req, res, next) => {
     const newStyle = {
       beardStyle: req.body.beardStyle,
       hairStyle: req.body.hairStyle,
-      primaryImage: req.body.primaryImage,
+      primaryImage: req.file.path,
       description: req.body.rating,
-      additionalImages: req.body.additionalImages,
+      /*       additionalImages: req.body.additionalImages,
       celebrities: [
         {
           nameOfCelebrity: req.body.nameOfCelebrity,
-          image: req.body.image,
-        },
-      ],
+          image: req.body.image, */
+      /* },
+      ], */
     };
+
+    console.log(newStyle);
 
     Style.create(newStyle)
       .then((newStyle) => {

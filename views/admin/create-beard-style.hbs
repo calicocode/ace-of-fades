@@ -1,20 +1,26 @@
 <h1>Create New Beard Style</h1>
 
-<form method="POST" action="/manage-styles/create-new-style">
-  <label>
-    Beard Style:
-    <input type="text" name="beardStyle" />
-  </label>
+<form method="POST" action="/manage-styles/create-new-style" enctype="multipart/form-data" id = "create-beard-style"></form>
 
-  <label>
-    Upload Primary Image:
-    <textarea name="primaryImage" cols="30" rows="4"> </textarea>
-  </label>
+  <p>
+    <label>
+      Beard Style:
+      <input type="text" name="beardStyle" />
+    </label>
+  </p>
+  <p>
+    <label>
+      Upload Primary Image:
+      <input type= "file" name="primaryImage" class="file-input w-full max-w-xs" />
+    </label>
 
-  <label>
-    Description:
-    <input type="description" name="rating" min="1" max="10" />
-  </label>
+  </p>
+  <p>
+    <label>
+      Description:
+      <input type="description" name="rating" min="1" max="10" />
+    </label>
+  </p>
+<button type="submit" form="create-beard-style" value="Submit">Submit</button>
 
-  <button type="submit"> Create </button>
 </form>
