@@ -3,7 +3,7 @@
     <div id="login-form" class="md:w-1/2 bg-white-600">
       <div class="w-96 p-6 shadow-lh bg-gray-100 rounded-md flex flex-col">
         <h1 class="text-3xl block text-center font-semibold">
-          New Beard Style</h1>
+          Upload Your Style</h1>
         <hr class="mt-3" />
 
         <form
@@ -14,18 +14,29 @@
         >
           <div class="mt-3">
             <label class="block text-base mb-2">
-              Beard Style
+              Title
               <input
                 type="text"
                 name="beardStyle"
-                placeholder="Your Style"
+                placeholder="What's your style called?"
+                class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+              />
+            </label>
+          </div>
+          <div class="mt-3">
+            <label class="block text-base mb-2">
+              Slogan
+              <input
+                type="text"
+                name="slogan"
+                placeholder="Enter Slogan"
                 class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
               />
             </label>
           </div>
           <div>
             <label class="block text-base mb-2">
-              Upload Primary Image
+              Upload Image
               <input
                 type="file"
                 name="imageURL"

@@ -38,7 +38,8 @@ const userSchema = new Schema(
 
     myUploadedStyles: [
       {
-        nameOfStyle: String,
+        title: String,
+        slogan: String,
         imageURL: String,
       },
     ],
