@@ -33,30 +33,6 @@ const styles = [
   },
 
   {
-    beardStyle: "Beardstache",
-    primaryImage: "../images/beardstache.png",
-    slogan: "Slight upside-down V shape. Partially covers upper lip",
-    /* additionalImages: [
-    /* additionalImages: ["URL1", "URL2", "URL3"], */
-    description: "This is a BEAST of a handlebar moustache",
-    /* celebrities: [
-      {
-        nameOfCelebrity: "Brad Pitt",
-        image: "URL",
-      },
-      {
-        nameOfCelebrity: "Matt Dawon",
-        image: "URL",
-      },
-
-      {
-        nameOfCelebrity: "Al Pacino",
-        image: "URL",
-      },
-    ], */
-  },
-
-  {
     hairStyle: "Crew Cut",
     primaryImage: "../images/beardstache.png",
     slogan: "Timeless cut",
