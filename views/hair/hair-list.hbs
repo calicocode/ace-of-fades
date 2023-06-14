@@ -1,20 +1,25 @@
-<h1>Hair Listing</h1>
+<section class="my-5">
 
-{{#each hair}}
+  <div class="my-5 flex flex-row flex-wrap justify-around">
+    {{#each hair}}
 
-  {{#if this.hairStyle}}
-  <a href="/hair/{{this._id}}">
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure><img src="{{this.primaryImage}}" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">{{this.hairStyle}}</h2>
-        <div class="card-actions justify-end">
-        </div>
-      </div>
-      </a>
-    </div>
+      {{#if this.hairStyle}}
+        <a href="/hair/{{this._id}}">
 
-<br>
-<br>
-  {{/if}}
-{{/each}}
+          <div class="m-10 w-card w-96 shadow-xl"><img
+              src="{{this.primaryImage}}"
+            /></div>
+          <div class="card-body">
+
+            <div class="card-actions">
+
+            </div>
+          </div>
+        </a>
+
+        <br />
+        <br />
+      {{/if}}
+    {{/each}}
+  </div>
+</section>
