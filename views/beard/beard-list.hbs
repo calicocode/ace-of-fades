@@ -1,24 +1,31 @@
 <section class="my-5">
 
-<div class="my-5 flex flex-row flex-wrap justify-around">
-{{#each beards}}
+  <div class="my-5 flex flex-row flex-wrap justify-around">
+    {{#each beards}}
 
-  {{#if this.beardStyle}}
-  <a href="/beard/{{this._id}}">
-    
-      <div class="m-10 w-card w-96 shadow-2xl"><img src="{{this.primaryImage}}" /></div>
-      <div class="card-body">
-       
-        <div class="card-actions">
-          
-        </div>
-      </div>
-      </a>
-    
+      {{#if this.beardStyle}}
+        <a href="/beard/{{this._id}}">
 
-<br>
-<br>
-  {{/if}}
-{{/each}}
-</div>
+          <div class="m-10 w-card w-96 shadow-2xl"><img
+              src="{{this.primaryImage}}"
+            /></div>
+          <div class="card-body">
+
+            <div class="card-actions">
+
+            </div>
+          </div>
+        </a>
+
+        <br />
+        <br />
+      {{/if}}
+    {{/each}}
+  </div>
+  <div class="pb-10 pl-10">
+  <a
+    href="/manage-styles/create-beard-style"
+    class="bg-[#FF5178] text-white px-5 py-2 rounded-full hover:bg-gray-700"
+  >Create new beard</a>
+  </div>
 </section>
