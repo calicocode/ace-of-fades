@@ -127,24 +127,32 @@ router.get(
 // UPDATE: process form
 router.post(
   "/manage-styles/:styleID/edit",
+  fileUploader.single("primaryImage"),
   isLoggedIn,
   isAdmin,
   (req, res, next) => {
     const { styleID } = req.params;
-    const {
-      beardStyle,
-      hairStyle,
-      primaryImage,
-      additionalImages,
-      celebrities,
-    } = req.body;
+    const { beardStyle, hairStyle, slogan, description, existingImage } =
+      req.body;
+
+    console.log(req.body.existingImage);
+    let primaryImage;
+    if (req.file) {
+      primaryImage = req.file.path;
+    } else {
+      primaryImage = existingImage;
+    }
+
+    console.log(req.body.primaryImage);
 
     Style.findByIdAndUpdate(
       styleID,
-      { beardStyle, hairStyle, primaryImage, additionalImages, celebrities },
+      { beardStyle, hairStyle, primaryImage, slogan, description },
       { new: true }
     )
-      .then((updatedStyle) => res.redirect(`/manage-styles/${updatedStyle.id}`)) // go to the details page to see the updates
+      .then((updatedStyle) =>
+        res.redirect(`/manage-styles/${updatedStyle.id}/edit`)
+      ) // go to the details page to see the updates
       .catch((error) => next(error));
   }
 );

@@ -1,49 +1,80 @@
-<h1>
-  Edit the style:
-  {{#if hairStyle}}{{style.hairStyle}}{{/if}}{{#if beardStyle}}
-    {{style.beardStyle}}{{/if}}
-</h1>
+<P>
+  <h1>
+    Edit the style:
+  </h1>
+</P>
 
-<form method="POST" action="/books/{{_id}}/delete">
-  <button>Delete</button>
-</form>
+<form
+  method="POST"
+  action="/manage-styles/{{style._id}}/edit"
+  enctype="multipart/form-data"
+>
 
-<form method="POST" action="/manage-styles/{{style._id}}/edit">
+  <br />
+  <br />
+  <p>
+
+    <label>
+      Style:
+      {{#if style.hairStyle}}
+        <textarea
+          name="hairStyle"
+          cols="10"
+          rows="2"
+        >{{style.hairStyle}}</textarea>
+      {{/if}}
+      {{#if style.beardStyle}}
+        <textarea
+          name="beardStyle"
+          cols="50"
+          rows="1"
+        >{{style.beardStyle}}</textarea>
+      {{/if}}
+    </label>
+
+  </p>
+
+  <div class="form-group">
+    <p>
+      Current Image:
+      <img src="{{style.primaryImage}}" />
+    </p>
+    <label>Replace existing image:
+      <input type="file" name="primaryImage" class="form-control-file" />
+      <input
+        type="text"
+        name="existingImage"
+        hidden
+        value="{{style.primaryImage}}"
+      />
+      <br />
+
+    </label>
+  </div>
+
   <label>
-    Title:
-    <input type="text" name="title" value="{{book.title}}" />
+    Slogan:
+    <textarea name="slogan" cols="10" rows="2">{{style.slogan}}</textarea>
   </label>
 
-  <label>
-    Author:
-    <select name="author">
-      {{#each authors}}
-        <option value={{this._id}}>
-          {{this.name}}
-        </option>
-      {{/each}}
-    </select>
-  </label>
+  <p>
 
-  <label>
-    Description:
-    <textarea
-      name="description"
-      cols="30"
-      rows="4"
-    >{{book.description}}</textarea>
-  </label>
+  </p>
 
-  <label>
-    Rate:
-    <input
-      type="number"
-      name="rating"
-      min="1"
-      max="10"
-      value="{{book.rating}}"
-    />
-  </label>
+  <p>
+    <label>
+      Description:
+      <textarea
+        name="description"
+        cols="50"
+        rows="7"
+      >{{style.description}}</textarea>
+    </label>
+  </p>
 
-  <button>Save changes</button>
+  <button>Update Style</button>
+  {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
+
 </form>

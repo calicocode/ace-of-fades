@@ -12,6 +12,7 @@
           enctype="multipart/form-data"
           id="my-styles"
         >
+        
           <div class="mt-3">
             <label class="block text-base mb-2">
               Title
@@ -49,7 +50,7 @@
           <button
             class="border-2 border-gray-700 bg-gray-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-[#FF5178] font-semibold"
             type="submit"
-            form="create-beard-style"
+            form="upload-style"
             value="Submit"
           >Upload</button>
           {{#if errorMessage}}
@@ -58,10 +59,14 @@
         </form>
     
 </section>
-
-{{#each mystyles}}
-
-{{myUploadedStyles.nameOfStyle}}
+<hr>
+{{!-- {{#each myStyles}}
+<p>
+{{myUploadedStyles.title}}
+</p>
+<p>
+{{myUploadedStyles.slogan}}
+</p>
 <p><img src="{{myUploadedStyles.imageURL}}"/></p>
 
-{{/each}}
+{{/each}} --}}
