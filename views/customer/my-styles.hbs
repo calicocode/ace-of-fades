@@ -1,0 +1,56 @@
+<section class="min-h-screen flex items-start justify-center p-10">
+  <div class="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5">
+    <div id="login-form" class="md:w-1/2 bg-white-600">
+      <div class="w-96 p-6 shadow-lh bg-gray-100 rounded-md flex flex-col">
+        <h1 class="text-3xl block text-center font-semibold">
+          New Beard Style</h1>
+        <hr class="mt-3" />
+
+        <form
+          action="/my-styles"
+          method="POST"
+          enctype="multipart/form-data"
+          id="my-styles"
+        >
+          <div class="mt-3">
+            <label class="block text-base mb-2">
+              Beard Style
+              <input
+                type="text"
+                name="beardStyle"
+                placeholder="Your Style"
+                class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+              />
+            </label>
+          </div>
+          <div>
+            <label class="block text-base mb-2">
+              Upload Primary Image
+              <input
+                type="file"
+                name="imageURL"
+                class="file-input border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+              />
+            </label>
+
+          </div>
+          
+          <button
+            class="border-2 border-gray-700 bg-gray-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-[#FF5178] font-semibold"
+            type="submit"
+            form="create-beard-style"
+            value="Submit"
+          >Upload</button>
+          {{#if errorMessage}}
+            <p class="error">{{errorMessage}}</p>
+          {{/if}}
+        </form>
+    
+</section>
+
+{{#each mystyles}}
+
+{{myUploadedStyles.nameOfStyle}}
+<p><img src="{{myUploadedStyles.imageURL}}"/></p>
+
+{{/each}}

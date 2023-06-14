@@ -137,7 +137,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
           if (user.role === "admin") {
             res.redirect("/manage-styles");
           } else {
-            res.redirect("/");
+            res.redirect("/my-styles");
           }
         })
 

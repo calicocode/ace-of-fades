@@ -6,13 +6,15 @@ const styles = [
   {
     beardStyle: "Chevron Mustache",
     primaryImage: "../images/chevron.png",
-    additionalImages: [
+    keywords:
+      "The quintessential mustache style. Famous Chevrons include Freddie Mercury, and your dad probably...",
+    /* additionalImages: [
       "../images/chevron.png",
       "../images/chevron.png",
       "../images/chevron.png",
-    ],
+    ], */
     description: "This is a BEAST of a handlebar moustache",
-    celebrities: [
+    /* celebrities: [
       {
         nameOfCelebrity: "Brad Pitt",
         image: "URL",
@@ -26,15 +28,17 @@ const styles = [
         nameOfCelebrity: "Al Pacino",
         image: "URL",
       },
-    ],
+    ], */
   },
 
   {
     beardStyle: "Beardstache",
     primaryImage: "../images/beardstache.png",
-    additionalImages: ["URL1", "URL2", "URL3"],
+    keywords: "Slight upside-down V shape. Partially covers upper lip",
+    /* additionalImages: [
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
     description: "This is a BEAST of a handlebar moustache",
-    celebrities: [
+    /* celebrities: [
       {
         nameOfCelebrity: "Brad Pitt",
         image: "URL",
@@ -48,15 +52,16 @@ const styles = [
         nameOfCelebrity: "Al Pacino",
         image: "URL",
       },
-    ],
+    ], */
   },
 
   {
     hairStyle: "Crew Cut",
     primaryImage: "../images/beardstache.png",
-    additionalImages: ["URL1", "URL2", "URL3"],
+    keywords: "Timeless cut",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
     description: "This is a BEAST of a handlebar moustache",
-    celebrities: [
+    /* celebrities: [
       {
         nameOfCelebrity: "Brad Pitt",
         image: "URL",
@@ -70,20 +75,21 @@ const styles = [
         nameOfCelebrity: "Vin Diesel",
         image: "URL",
       },
-    ],
+    ], */
   },
 
   {
     hairStyle: "The Peaky Blinder",
     primaryImage: "../images/beardstache.png",
-    additionalImages: ["URL1", "URL2", "URL3"],
+    keywords: "this needs ZERO introduction...",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
     description: "This is a BEAST of a handlebar moustache",
-    celebrities: [
+    /* celebrities: [
       {
         nameOfCelebrity: "Peaky Blinders",
         image: "URL",
       },
-    ],
+    ], */
   },
 ];
 
