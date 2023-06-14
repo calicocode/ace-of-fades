@@ -218,6 +218,21 @@ const styles = [
       },
     ], */
   },
+
+  {
+    beardStyle: "The Zappa",
+    primaryImage: "/images/zappa.webp",
+    slogan: "Badass as hell",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description:
+      "Made famous by Frank Zappa, The Zappa is a shortened version of the Horseshoe Mustache with the addition of a soul patch.",
+    /* celebrities: [
+      {
+        nameOfCelebrity: "Peaky Blinders",
+        image: "URL",
+      },
+    ], */
+  },
 ];
 
 async function seedData() {
