@@ -6,7 +6,11 @@ const styles = [
   {
     beardStyle: "Chevron Mustache",
     primaryImage: "../images/chevron.png",
-    additionalImages: ["URL1", "URL2", "URL3"],
+    additionalImages: [
+      "../images/chevron.png",
+      "../images/chevron.png",
+      "../images/chevron.png",
+    ],
     description: "This is a BEAST of a handlebar moustache",
     celebrities: [
       {
