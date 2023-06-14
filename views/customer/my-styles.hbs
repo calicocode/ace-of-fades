@@ -6,12 +6,15 @@
           Upload Your Style</h1>
         <hr class="mt-3" />
 
+
+
+
+
         <form
           action="/my-styles"
           method="POST"
           enctype="multipart/form-data"
-          id="my-styles"
-        >
+          id="my-styles" >
         
           <div class="mt-3">
             <label class="block text-base mb-2">
@@ -53,9 +56,10 @@
             form="upload-style"
             value="Submit"
           >Upload</button>
+           </form>
           {{#if errorMessage}}
             <p class="error">{{errorMessage}}</p>
           {{/if}}
-        </form>
+       
     
 </section>
