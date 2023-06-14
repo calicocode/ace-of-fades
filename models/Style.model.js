@@ -14,7 +14,7 @@ const styleSchema = new Schema(
       required: true,
     },
 
-    keywords: {
+    slogan: {
       type: String,
       required: true,
     },
