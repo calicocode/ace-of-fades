@@ -143,6 +143,81 @@ const styles = [
       },
     ], */
   },
+
+  {
+    beardStyle: "The Hungarian",
+    primaryImage: "/images/hungarian.webp",
+    slogan: "this needs ZERO introduction...",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description:
+      "The Hungarian Mustache is the stuff of legends. Part walrus, part handlebar, and 100% badass. It’s a big, swooping handlebar that, due to its size, sits lower on the cheeks. All your old legends of the Wild West, including Wyatt Earp and Seth Bullock, wore Hungarian Mustaches. They probably weren't known as Hungarian mustaches at the time, though. Val Kilmer’s depiction of Doc Holliday has more of the standard handlebar, but photos of Holliday generally show him with a Hungarian. We aren’t quite sure where it gets its name. It may be tied to Franz Ferdinand—the Archduke of the Austro-Hungarian Empire, not the band—or it could be because the mustache is so big it eats your face… because it was Hungary. What, you thought you were going to read a blog about mustaches and not come across one dad joke?",
+    /* celebrities: [
+      {
+        nameOfCelebrity: "Peaky Blinders",
+        image: "URL",
+      },
+    ], */
+  },
+
+  {
+    beardStyle: "The Dalí",
+    primaryImage: "/images/dali.webp",
+    slogan: "this needs ZERO introduction...",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description:
+      "Made famous by the Spanish surrealist painter Salvador Dalí, the Dalí is an elaborate take on the traditional handlebar mustache. The Dalí is a pencil mustache with long handles. The handlebars are waxed thin and form a sharp point. They’re most often seen styled straight up towards the outer edges of the eyes resulting in a ‘stache that resembles the horns of a Texas Longhorn. Dalí often styled his handlebars eccentrically, sometimes into an infinity symbol.",
+    /* celebrities: [
+      {
+        nameOfCelebrity: "Peaky Blinders",
+        image: "URL",
+      },
+    ], */
+  },
+
+  {
+    beardStyle: "The Fu Manchu",
+    primaryImage: "/images/fumanchu.webp",
+    slogan: "this needs ZERO introduction...",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description:
+      "Ready to have your mind blown? The Fu Manchu is a Dalí Mustache with two slight differences—a wide gap is shaved at the philtrum, and the handles are styled to hang straight down instead of being pointed upwards. Horseshoe mustaches are often mislabeled as a Fu Manchu, but the Fu Manchu differs from the horseshoe in that the Fu Manchu is only connected to the face at the top corners of the mouth. If you can’t lift your handles away from your face and style them in another direction, you’ve got a horseshoe, not a Fu Manchu.",
+    /* celebrities: [
+      {
+        nameOfCelebrity: "Peaky Blinders",
+        image: "URL",
+      },
+    ], */
+  },
+
+  {
+    beardStyle: "The Horseshoe",
+    primaryImage: "/images/horseshoe.webp",
+    slogan: "this needs ZERO introduction...",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description:
+      "The horseshoe is the American muscle car of mustaches. It’s big, loud, and popular in the south. Perhaps no mustache is mislabeled more than the horseshoe—it’s not a Fu Manchu. The horseshoe is a thick, full mustache that connects to two vertical strips of cheek hair grown parallel to the mouth and extending to the jawline. Take a circle beard and shave just the chin—that’s a horseshoe. Longer walrus mustaches are often mislabeled as horseshoes as well. The difference? The walrus is all mustache that has grown long enough and hangs low enough next to the mouth to resemble a horseshoe. But a pure horseshoe? That requires cheek hair. You can’t lift a horseshoe away from your face. The horseshoe has had a resurgence amongst athletes, especially NFL quarterbacks. Aaron Rodgers, Jared Allen, and Joe Flacco have all worn them. The original NFL horseshoe? Broadway Joe Namath.",
+    /* celebrities: [
+      {
+        nameOfCelebrity: "Peaky Blinders",
+        image: "URL",
+      },
+    ], */
+  },
+
+  {
+    beardStyle: "The Beardstache",
+    primaryImage: "/images/beardstache.webp",
+    slogan: "Badass as hell",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description:
+      "The Beardstache itself isn’t a particular mustache style, and it can be worn with many of the styles mentioned above. The Beardstache is simply the combination of a full mustache and a bit of stubble—anywhere from a few days to a few weeks. We’re big fans of the beardstache and think that it’s one of the coolest ways to wear a mustache in 2020. The stubble gives your jawline and cheek lines a little more definition, and the contrast between the full mustache and the stubble looks badass.",
+    /* celebrities: [
+      {
+        nameOfCelebrity: "Peaky Blinders",
+        image: "URL",
+      },
+    ], */
+  },
 ];
 
 async function seedData() {
