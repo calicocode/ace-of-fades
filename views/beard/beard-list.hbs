@@ -1,22 +1,20 @@
-<section class="m-10">
-<h1>Beard Listing</h1>
-<br />
-<br />
-<div class="mx-20 my-5">
+<section class="my-5">
+
+<div class="my-5 flex flex-row flex-wrap justify-around">
 {{#each beards}}
 
   {{#if this.beardStyle}}
   <a href="/beard/{{this._id}}">
-    <div class="flex flex-row card w-96 bg-base-100 shadow-xl rounded-xl p-5 bg-gradient-to-r from-[#EEEEEE] to-gray-100">
-      <div class="w-1/2 flex"><img src="{{this.primaryImage}}" /></div>
+    
+      <div class="m-10 w-card w-96 shadow-xl"><img src="{{this.primaryImage}}" /></div>
       <div class="card-body">
-        <h2 class="card-title font-bold">{{this.beardStyle}}</h2>
+       
         <div class="card-actions">
-          {{this.slogan}}
+          
         </div>
       </div>
       </a>
-    </div>
+    
 
 <br>
 <br>
