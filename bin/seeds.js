@@ -5,13 +5,13 @@ const Style = require("../models/Style.model");
 const styles = [
   {
     beardStyle: "Chevron Mustache",
-    primaryImage: "../images/chevron.webp",
+    primaryImage: "/images/chevron.webp",
     slogan:
       "The quintessential mustache style. Famous Chevrons include Freddie Mercury, and your dad probably...",
     /* additionalImages: [
-      "../images/chevron.png",
-      "../images/chevron.png",
-      "../images/chevron.png",
+      "/images/chevron.png",
+      "/images/chevron.png",
+      "/images/chevron.png",
     ], */
     description:
       "The chevron mustache is the quintessential mustache style. It follows the shape of the upper lip, resulting in a natural mustache that has a slight upside-down V shape. We couldn’t find any evidence that this is where it gets its name, but if you took the Chevron Corporation logo and flipped it upside-down, that’s what a chevron mustache looks like. If you’ve never worn just a mustache, the chevron is a great place to start. It’s a natural style that requires minimal grooming. It’s timeless.",
@@ -34,7 +34,7 @@ const styles = [
 
   {
     hairStyle: "Crew Cut",
-    primaryImage: "../images/beardstache.png",
+    primaryImage: "/images/beardstache.png",
     slogan: "Timeless cut",
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description: "This is a BEAST of a handlebar moustache",
@@ -57,7 +57,7 @@ const styles = [
 
   {
     hairStyle: "The Peaky Blinder",
-    primaryImage: "../images/beardstache.png",
+    primaryImage: "/images/beardstache.png",
     slogan: "this needs ZERO introduction...",
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description: "This is a BEAST of a handlebar moustache",
@@ -71,7 +71,7 @@ const styles = [
 
   {
     beardStyle: "The Lampshade",
-    primaryImage: "../images/lampshade.webp",
+    primaryImage: "/images/lampshade.webp",
     slogan: "this needs ZERO introduction...",
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description:
@@ -86,7 +86,7 @@ const styles = [
 
   {
     beardStyle: "The Walrus",
-    primaryImage: "../images/walrus.webp",
+    primaryImage: "/images/walrus.webp",
     slogan: "this needs ZERO introduction...",
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description:
@@ -101,7 +101,7 @@ const styles = [
 
   {
     beardStyle: "The Painter´s brush",
-    primaryImage: "../images/painter.webp",
+    primaryImage: "/images/painter.webp",
     slogan: "this needs ZERO introduction...",
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description:
@@ -116,7 +116,7 @@ const styles = [
 
   {
     beardStyle: "The Handlebar",
-    primaryImage: "../images/handlebar.webp",
+    primaryImage: "/images/handlebar.webp",
     slogan: "this needs ZERO introduction...",
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description:
@@ -131,7 +131,7 @@ const styles = [
 
   {
     beardStyle: "The English",
-    primaryImage: "../images/english.webp",
+    primaryImage: "/images/english.webp",
     slogan: "this needs ZERO introduction...",
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description:
