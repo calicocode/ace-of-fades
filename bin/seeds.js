@@ -6,7 +6,7 @@ const styles = [
   {
     beardStyle: "Chevron Mustache",
     primaryImage: "../images/chevron.png",
-    keywords:
+    slogan:
       "The quintessential mustache style. Famous Chevrons include Freddie Mercury, and your dad probably...",
     /* additionalImages: [
       "../images/chevron.png",
@@ -34,7 +34,7 @@ const styles = [
   {
     beardStyle: "Beardstache",
     primaryImage: "../images/beardstache.png",
-    keywords: "Slight upside-down V shape. Partially covers upper lip",
+    slogan: "Slight upside-down V shape. Partially covers upper lip",
     /* additionalImages: [
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description: "This is a BEAST of a handlebar moustache",
@@ -58,7 +58,7 @@ const styles = [
   {
     hairStyle: "Crew Cut",
     primaryImage: "../images/beardstache.png",
-    keywords: "Timeless cut",
+    slogan: "Timeless cut",
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description: "This is a BEAST of a handlebar moustache",
     /* celebrities: [
@@ -81,7 +81,7 @@ const styles = [
   {
     hairStyle: "The Peaky Blinder",
     primaryImage: "../images/beardstache.png",
-    keywords: "this needs ZERO introduction...",
+    slogan: "this needs ZERO introduction...",
     /* additionalImages: ["URL1", "URL2", "URL3"], */
     description: "This is a BEAST of a handlebar moustache",
     /* celebrities: [
