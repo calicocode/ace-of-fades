@@ -14,19 +14,24 @@ const styleSchema = new Schema(
       required: true,
     },
 
-    additionalImages: [
+    keywords: {
+      type: String,
+      required: true,
+    },
+
+    /* additionalImages: [
       {
         type: String,
         required: false,
       },
-    ],
+    ], */
 
     description: {
       type: String,
       required: true,
     },
 
-    celebrities: [
+    /* celebrities: [
       {
         nameOfCelebrity: {
           type: String,
@@ -34,8 +39,8 @@ const styleSchema = new Schema(
         image: {
           type: String,
         },
-      },
-    ],
+      }, */
+    /*  ], */
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

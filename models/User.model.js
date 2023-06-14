@@ -36,13 +36,12 @@ const userSchema = new Schema(
       required: true,
     },
 
-    /*     myStyles: [
+    myUploadedStyles: [
       {
-        styleType: String,
-        style: Enumerator,
-        uploadedImage: String,
-      }, */
-    /*     ], */
+        nameOfStyle: String,
+        imageURL: String,
+      },
+    ],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
