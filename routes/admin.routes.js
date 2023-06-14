@@ -46,15 +46,49 @@ router.post(
     const newStyle = {
       beardStyle: req.body.beardStyle,
       hairStyle: req.body.hairStyle,
+      slogan: req.body.slogan,
       primaryImage: req.file.path,
       description: req.body.rating,
-      /*       additionalImages: req.body.additionalImages,
-      celebrities: [
-        {
-          nameOfCelebrity: req.body.nameOfCelebrity,
-          image: req.body.image, */
-      /* },
-      ], */
+    };
+
+    console.log(newStyle);
+
+    Style.create(newStyle)
+      .then((newStyle) => {
+        res.redirect("/manage-styles");
+      })
+      .catch((e) => {
+        console.log("error creating new style", e);
+        next(e);
+      });
+  }
+);
+
+// DISPLAY FORM FOR CREATE NEW HAIR STYLE
+router.get(
+  "/manage-styles/create-hair-style",
+  isLoggedIn,
+  isAdmin,
+  (req, res, next) => {
+    res.render("admin/create-hair-style");
+  }
+);
+
+// CREATE: process form
+router.post(
+  "/manage-styles/create-new-style",
+  fileUploader.single("primaryImage"),
+  isLoggedIn,
+  isAdmin,
+  (req, res, next) => {
+    console.log(req);
+
+    const newStyle = {
+      beardStyle: req.body.beardStyle,
+      hairStyle: req.body.hairStyle,
+      slogan: req.body.slogan,
+      primaryImage: req.file.path,
+      description: req.body.rating,
     };
 
     console.log(newStyle);
