@@ -1,13 +1,13 @@
 <section class="my-5">
 
-  <div class="my-5 flex flex-row flex-wrap justify-around">
+  <div class="my-5 flex flex-row flex-wrap justify-around items-center">
     {{#each hair}}
 
       {{#if this.hairStyle}}
-      <div>
+      <div class="object-center">
         {{!--  <a href="/hair/{{this._id}}">--}}
           
-          <div class="m-10 w-card w-96 shadow-xl font-bold">
+          <div class="m-5 w-card w-96 shadow-xl font-bold">
             {{this.hairStyle}}<img
               src="{{this.primaryImage}}"
             /></div>
