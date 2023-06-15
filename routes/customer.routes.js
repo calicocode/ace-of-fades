@@ -31,39 +31,24 @@ router.post(
   fileUploader.single("imageURL"),
   isLoggedIn,
   (req, res, next) => {
-    User.findByIdAndUpdate(
-      req.session.currentUser._id,
-      {
-        $set: {
-          "myUploadedStyles.$.title": "req.body.title",
-          "myUploadedStyles.$.slogan": "req.body.slogan",
-          "myUploadedStyles.$.imageURL": "req.file.path",
+    User.findByIdAndUpdate(req.session.currentUser._id, {
+      $push: {
+        myUploadedStyles: {
+          title: req.body.title,
+          slogan: req.body.slogan,
+          imageURL: req.file.path,
         },
-      }.then((updatedUser) => {
-        res.redirect("/my-styles").catch((e) => {
-          console.log("error getting list of users styles from DB", e);
-          next(e);
-        });
-      })
-    );
-  }
-);
-/*       .then((newStyle) => {
-        res.redirect("/my-styles");
-      })
-      .catch((e) => { */
-
-/*         },
       },
     })
-      .then((newStyle) => {
+      .then((updatedUser) => {
+        console.log(updatedUser);
         res.redirect("/my-styles");
       })
-      .catch((e) => { */
-/*         console.log("error getting list of users styles from DB", e);
+      .catch((e) => {
+        console.log("error getting list of users styles from DB", e);
         next(e);
       });
   }
-); */
+);
 
 module.exports = router;
