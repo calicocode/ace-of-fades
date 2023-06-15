@@ -33,43 +33,6 @@ const styles = [
   },
 
   {
-    hairStyle: "Crew Cut",
-    primaryImage: "/images/beardstache.png",
-    slogan: "Timeless cut",
-    /* additionalImages: ["URL1", "URL2", "URL3"], */
-    description: "This is a BEAST of a handlebar moustache",
-    /* celebrities: [
-      {
-        nameOfCelebrity: "Brad Pitt",
-        image: "URL",
-      },
-      {
-        nameOfCelebrity: "Dawson",
-        image: "URL",
-      },
-
-      {
-        nameOfCelebrity: "Vin Diesel",
-        image: "URL",
-      },
-    ], */
-  },
-
-  {
-    hairStyle: "The Peaky Blinder",
-    primaryImage: "/images/beardstache.png",
-    slogan: "this needs ZERO introduction...",
-    /* additionalImages: ["URL1", "URL2", "URL3"], */
-    description: "This is a BEAST of a handlebar moustache",
-    /* celebrities: [
-      {
-        nameOfCelebrity: "Peaky Blinders",
-        image: "URL",
-      },
-    ], */
-  },
-
-  {
     beardStyle: "The Lampshade",
     primaryImage: "/images/lampshade.webp",
     slogan: "this needs ZERO introduction...",
@@ -232,6 +195,78 @@ const styles = [
         image: "URL",
       },
     ], */
+  },
+
+  {
+    hairStyle: "The Manbun",
+    primaryImage: "/images/bun.png",
+    slogan: "Timeless cut",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description: "This is a BEAST of a handlebar moustache",
+  },
+
+  {
+    hairStyle: "The Daddy",
+    primaryImage: "/images/daddy.png",
+    slogan: "this needs ZERO introduction...",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description: "This is a BEAST of a handlebar moustache",
+  },
+
+  {
+    hairStyle: "The Fade",
+    primaryImage: "/images/fade.png",
+    slogan: "Timeless cut",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description: "This is a BEAST of a handlebar moustache",
+  },
+
+  {
+    hairStyle: "The Flat top",
+    primaryImage: "/images/flat.png",
+    slogan: "this needs ZERO introduction...",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description: "This is a BEAST of a handlebar moustache",
+  },
+
+  {
+    hairStyle: "The Hipster",
+    primaryImage: "/images/hipster.png",
+    slogan: "Timeless cut",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description: "This is a BEAST of a handlebar moustache",
+  },
+
+  {
+    hairStyle: "The New Yorker",
+    primaryImage: "/images/newyork.png",
+    slogan: "this needs ZERO introduction...",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description: "This is a BEAST of a handlebar moustache",
+  },
+
+  {
+    hairStyle: "The Spiky",
+    primaryImage: "/images/spiky.png",
+    slogan: "Timeless cut",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description: "This is a BEAST of a handlebar moustache",
+  },
+
+  {
+    hairStyle: "The Wavy",
+    primaryImage: "/images/wavy.png",
+    slogan: "this needs ZERO introduction...",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description: "This is a BEAST of a handlebar moustache",
+  },
+
+  {
+    hairStyle: "The Baldy",
+    primaryImage: "/images/baldy.png",
+    slogan: "Timeless cut",
+    /* additionalImages: ["URL1", "URL2", "URL3"], */
+    description: "This is a BEAST of a handlebar moustache",
   },
 ];
 
