@@ -9,6 +9,20 @@ const isAdmin = require("../middleware/isAdmin.js");
 const fileUploader = require("../config/cloudinary.config");
 const req = require("express/lib/request");
 
+router.get("/all-styles", (req, res, next) => {
+  User.find()
+    .then((usersFromDB) => {
+      const data = {
+        users: usersFromDB,
+      };
+      res.render("customer/all-styles", data);
+    })
+    .catch((e) => {
+      console.log("error getting list of users styles from DB", e);
+      next(e);
+    });
+});
+
 router.get("/my-styles", isLoggedIn, (req, res, next) => {
   User.findById(req.session.currentUser._id)
     .then((myStylesFromDB) => {

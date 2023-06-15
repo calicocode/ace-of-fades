@@ -1,0 +1,31 @@
+TEST TEST TEST
+
+<section class="p-10">
+
+  <div class="flex flex-wrap justify-around">
+    <div class="flex">
+      {{#each users}}
+
+        {{#each myUploadedStyles}}
+
+          <div class="m-10 p-5 w-card w-96 shadow-2xl">
+            <div class="font-semibold">
+              {{this.title}}
+            </div>
+            {{this.slogan}}
+            <img src="{{this.imageURL}}" />
+          </div>
+          <div class="card-body">
+
+            <div class="card-actions">
+
+            </div>
+          </div>
+
+        {{/each}}
+
+      {{/each}}
+
+    </div>
+  </div>
+</section>
