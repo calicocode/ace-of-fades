@@ -27,11 +27,12 @@ router.post("/send-email", (req, res, next) => {
   // Send an email with the information we got from the form
   transporter
     .sendMail({
-      from: `"My Awesome Project " <${process.env.EMAIL_ADDRESS}>`,
-      to: email,
+      from: `"My Awesome Project " <${process.env.EMAIL_ADDRESS}>` /* email */,
+      to: `"My Awesome Project " <${process.env.EMAIL_ADDRESS}>`,
+      email: email,
       subject: subject,
       text: message,
-      html: `<b>${message}</b>`,
+      html: `<b>Email from ${email} <br><br><br>Subject: ${subject}<br><br><br>Their message: ${message}</b>`,
     })
     .then((info) => res.render("message", { email, subject, message, info }))
     .catch((error) => console.log(error));

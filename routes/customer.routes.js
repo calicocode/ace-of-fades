@@ -44,6 +44,7 @@ router.post(
         console.log(updatedUser);
         res.redirect("/my-styles");
       })
+
       .catch((e) => {
         console.log("error getting list of users styles from DB", e);
         next(e);

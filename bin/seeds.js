@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const Style = require("../models/Style.model");
 //const User = require('../models/User.model');
 
+// require("dotenv").config();
+
 const styles = [
   {
     beardStyle: "Chevron Mustache",
